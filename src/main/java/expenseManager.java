@@ -40,4 +40,19 @@ public class expenseManager {
 
         return total;
     }
+
+    public String createCsvReport() {
+        String report = "Description,Category,Amount,Date\n";
+
+        for (expense expense : expenses) {
+            report = report
+                    + expense.getDescription() + ","
+                    + expense.getCategory() + ","
+                    + expense.getAmount() + ","
+                    + expense.getDate() + "\n";
+        }
+
+        return report;
+    }
+
 }
