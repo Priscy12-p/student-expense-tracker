@@ -14,4 +14,20 @@ public class expenseManagerTest {
 
         assertEquals(80.0, manager.calculateTotalExpenses(), 0.001);
     }
+
+    @Test
+    void testCreateCsvReport() {
+        expenseManager manager = new expenseManager();
+
+        manager.addexpense(new expense("Lunch", "Food", 50.0, "2026-10-25"));
+
+        String report = manager.createCsvReport();
+
+        assertEquals(
+                "Description,Category,Amount,Date\n"
+                        + "Lunch,Food,50.0,2026-10-25\n",
+                report
+        );
+    }
+
 }

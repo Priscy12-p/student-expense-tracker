@@ -23,7 +23,7 @@ public class main {
 
         int choice = 0;
 
-        while (choice != 5) {
+        while (choice != 6) {
 
             System.out.println();
             System.out.println("================================");
@@ -33,7 +33,8 @@ public class main {
             System.out.println("2. View all expenses");
             System.out.println("3. View total expenses");
             System.out.println("4. View budget summary");
-            System.out.println("5. Exit");
+            System.out.println("5. Save expense report");
+            System.out.println("6. Exit");
             System.out.print("Choose an option: ");
 
             choice = scanner.nextInt();
@@ -116,13 +117,17 @@ public class main {
 
             } else if (choice == 5) {
 
+                manager.saveCsvReport("expenses.csv");
+
+            } else if (choice == 6) {
+
                 System.out.println(
                         "Thank you for using Student Expense Tracker!"
                 );
 
             } else {
 
-                System.out.println("Invalid option. Please choose 1 to 5.");
+                System.out.println("Invalid option. Please choose 1 to 6.");
 
             }
         }

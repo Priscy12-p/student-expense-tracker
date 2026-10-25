@@ -1,4 +1,6 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class expenseManager {
@@ -54,5 +56,16 @@ public class expenseManager {
 
         return report;
     }
+
+
+    public void saveCsvReport(String fileName) {
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(createCsvReport());
+            System.out.println("CSV report saved successfully!");
+        } catch (IOException e) {
+            System.out.println("Could not save CSV report.");
+        }
+    }
+
 
 }
