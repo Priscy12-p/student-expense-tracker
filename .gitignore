@@ -23,4 +23,5 @@
 hs_err_pid*
 replay_pid*
 
+#Ignoring expenses.csv file to not get tracked on git
 expenses.csv
