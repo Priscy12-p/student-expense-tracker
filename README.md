@@ -8,6 +8,7 @@ Assurance (QA) showcase**: it is covered by automated tests and documented with
 a QA plan, FMEA, root cause analysis and a defect log.
 
 > Demo video (5-10 min): **TODO: paste your YouTube link here**
+Your verification code: WTC-VJ3W7PZA
 
 ---
 
